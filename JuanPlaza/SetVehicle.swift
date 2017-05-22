@@ -16,6 +16,7 @@ class SetVehicle: UIViewController {
     @IBOutlet weak var carModel: UITextField!
     @IBOutlet weak var carTrim: UITextField!
     @IBOutlet weak var submitButton: UIButton!
+    
 
     
     override func viewDidLoad() {
@@ -38,6 +39,9 @@ class SetVehicle: UIViewController {
     func checkCar() {
         if (vehicleYear.text!.characters.count == 4 && !carMake.text!.isEmpty && !carModel.text!.isEmpty) {
             submitButton.isEnabled = true
+        }
+        else {
+            submitButton.isEnabled = false
         }
     }
     
